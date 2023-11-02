@@ -26,8 +26,22 @@ body {
 
 #content {
   min-height: 82vh !important;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.row {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#input {
+  width: 30%;
+}
+
+#button {
+  background-color: grey;
+  color: white;
 }
 
 p {
