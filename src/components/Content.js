@@ -11,7 +11,7 @@ export default function Content() {
     const APIKey = "0bbacea6a81b27ea27071eceb0d7471a"
     const APIId = "3afbd549"
 
-    const APIreq = `https://api.edamam.com/search?q=${userInput}&app_id=${APIId}&app_key=${APIKey}`
+    const APIreq = `https://api.edamam.com/search?q=${userInput}&app_id=${APIId}&app_key=${APIKey}&from=0&to=20`
 
     function handleChange(event) {
         setUserInput(event.target.value)
@@ -42,7 +42,7 @@ export default function Content() {
                         onChange={handleChange}
                         value={userInput} />
                     <br />
-                    <button type="submit"> Search </button>
+                    <button className="button" type="submit"> Search </button>
                 </form>
             </div>
             <div className="container">
@@ -50,10 +50,10 @@ export default function Content() {
                 <Cards 
                     key={index}
                     label={recipe.recipe.label}
-                    calories={recipe.recipe.calories}
+                    calories={Math.floor(recipe.recipe.calories)}
                     image={recipe.recipe.image}
                     ingredients = {recipe.recipe.ingredients.length}
-
+                    source= {recipe.recipe.source}
                 />
                 ))}
       </div>

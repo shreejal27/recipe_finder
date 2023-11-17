@@ -5,12 +5,16 @@ import '../Cards.css';
 export default function Cards(props) {
 
     return (
-            <div className="cards">
-            <img src={props.image} height="200px" width="200px" alt="{props.label}" ></img>
+        <div className="cards">
+            <img className="img" src={props.image} alt="{props.label}" ></img>
             <p className="name">{props.label}</p>
-            <p className="calories">{props.calories}</p>
-            <p className="ingredients">{props.ingredients}</p>
+            <div className="items">
+                <p><span className="calories">{props.calories}</span> Calories </p>
+                <hr />
+                <p><span className="ingredients">{props.ingredients}</span> Ingredients</p>
             </div>
+            <p className="source">{props.source}</p>
+        </div>
     )
 
 }
