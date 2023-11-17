@@ -3,12 +3,8 @@ export default function Header() {
     return (
         <div>
             <nav className="nav">
-                <h2>Recipe Finder</h2>
-                <ul className="navItems">
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact</li>
-                </ul>
+                <p className="title">Recipe Finder</p>
+                <p className="subtitle">Find the recipe for the dish you like</p>
             </nav>
         </div>
     )
