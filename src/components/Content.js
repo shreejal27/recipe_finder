@@ -27,7 +27,7 @@ export default function Content() {
         if (submitted) {
             fetch(APIreq)
                 .then(res => res.json())
-                .then(data => setRecipeData(data))
+                .then(data => setRecipeData(data.hits))
             setSubmitted(false);
         }
     }, [submitted,APIreq])
@@ -45,12 +45,19 @@ export default function Content() {
                     <button type="submit"> Search </button>
                 </form>
             </div>
-            <pre>{JSON.stringify(recipeData, null, 2)}</pre>
-            {/* {recipeData.length > 0 ? (
-                recipeData.map(recipe => <Cards />)
-            ) : (
-                <p>No recipes found</p>
-            )} */}
+            <div className="container">
+                {recipeData.map((recipe, index) => (
+                <Cards 
+                    key={index}
+                    label={recipe.recipe.label}
+                    calories={recipe.recipe.calories}
+                    image={recipe.recipe.image}
+                    ingredients = {recipe.recipe.ingredients.length}
+
+                />
+                ))}
+      </div>
+        
         </div>
     )
 
