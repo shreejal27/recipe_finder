@@ -38,11 +38,11 @@ export default function Content() {
                 <form id="form" onSubmit={handleSubmit}>
                     <input type="text"
                         id="input"
-                        placeholder="Enter an ingredient"
+                        placeholder="Search Recipes"
                         onChange={handleChange}
-                        value={userInput} />
-                    <br />
-                    <button className="button" type="submit"> Search </button>
+                        value={userInput} 
+                        />
+                    <button className="button" type="submit"> <i class="fa fa-search"></i> </button>
                 </form>
             </div>
             <div className="container">

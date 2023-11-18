@@ -4,7 +4,7 @@ export default function Header() {
         <div>
             <nav className="nav">
                 <p className="title">Recipe Finder</p>
-                <p className="subtitle">Find the recipe for the dish you like</p>
+                {/* <p className="subtitle">Find the recipe for the dish you like</p> */}
             </nav>
         </div>
     )
