@@ -1,4 +1,4 @@
-.cards{
+.cards {
     /* flex-grow: 1; */
     flex-basis: 20rem;
     margin: 1rem;
@@ -11,18 +11,18 @@
     padding: 0.3rem;
 }
 
-.cards:hover{
-    box-shadow: 0 0 20px rgba(33,33,33,.2);
+.cards:hover {
+    box-shadow: 0 0 20px rgba(33, 33, 33, .2);
     cursor: pointer;
     color: #77cc00;
 }
 
-.img{
-    height:20rem;
-    width:20rem;
+.img {
+    height: 20rem;
+    width: 20rem;
 }
 
-.name{
+.name {
     height: 2.5rem;
     font-size: 1.2rem;
     margin-top: 0.3rem;
@@ -33,7 +33,7 @@
     justify-content: center;
 }
 
-.items{
+.items {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -44,23 +44,29 @@
     color: black;
 }
 
-hr{
+hr {
     margin: 0;
 
 }
 
-.calories, .ingredients{
+.calories,
+.ingredients {
     color: #77cc00;
     font-weight: bold;
 }
 
-.source{
+/* a {
     text-align: left;
+} */
+
+.source {
+    display: flex; /* to align text to left */
     margin-top: 0.5rem;
     margin-left: 10px;
     color: grey;
+    text-decoration: none;
 }
 
-.source:hover{
+.source:hover {
     text-decoration: underline;
 }

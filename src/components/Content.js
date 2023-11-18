@@ -49,11 +49,13 @@ export default function Content() {
                 {recipeData.map((recipe, index) => (
                 <Cards 
                     key={index}
+                    recipeId={index+1}
                     label={recipe.recipe.label}
                     calories={Math.floor(recipe.recipe.calories)}
                     image={recipe.recipe.image}
                     ingredients = {recipe.recipe.ingredients.length}
                     source= {recipe.recipe.source}
+                    url= {recipe.recipe.url}
                 />
                 ))}
       </div>
