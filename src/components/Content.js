@@ -1,12 +1,14 @@
 import React from "react"
 
 import Cards from "./Cards"
+import CardDetails from "./CardDetails"
 
 export default function Content() {
 
     const [userInput, setUserInput] = React.useState("")
     const [recipeData, setRecipeData] = React.useState([])
     const [submitted, setSubmitted] = React.useState(false);
+    const [selectedRecipe, setSelectedRecipe] = React.useState(null)
 
     const APIKey = "0bbacea6a81b27ea27071eceb0d7471a"
     const APIId = "3afbd549"
@@ -20,7 +22,13 @@ export default function Content() {
     function handleSubmit(event) {
         event.preventDefault()
         setSubmitted(true);
+        setSelectedRecipe(null)
         console.log(userInput)
+    }
+
+    function handleCardClick(recipe) {
+        setSelectedRecipe(recipe)
+        console.log(recipe)
     }
 
     React.useEffect(() => {
@@ -30,7 +38,7 @@ export default function Content() {
                 .then(data => setRecipeData(data.hits))
             setSubmitted(false);
         }
-    }, [submitted,APIreq])
+    }, [submitted, APIreq])
 
     return (
         <div id="content">
@@ -40,26 +48,34 @@ export default function Content() {
                         id="input"
                         placeholder="Search Recipes"
                         onChange={handleChange}
-                        value={userInput} 
-                        />
+                        value={userInput}
+                    />
                     <button className="button" type="submit"> <i class="fa fa-search"></i> </button>
                 </form>
             </div>
-            <div className="container">
-                {recipeData.map((recipe, index) => (
-                <Cards 
-                    key={index}
-                    recipeId={index+1}
-                    label={recipe.recipe.label}
-                    calories={Math.floor(recipe.recipe.calories)}
-                    image={recipe.recipe.image}
-                    ingredients = {recipe.recipe.ingredients.length}
-                    source= {recipe.recipe.source}
-                    url= {recipe.recipe.url}
-                />
-                ))}
-      </div>
-        
+            {!selectedRecipe &&
+                <div className="container">
+                    {recipeData.map((recipe, index) => (
+                        <Cards
+                            key={index}
+                            recipeId={index}
+                            label={recipe.recipe.label}
+                            calories={Math.floor(recipe.recipe.calories)}
+                            image={recipe.recipe.image}
+                            ingredients={recipe.recipe.ingredients.length}
+                            source={recipe.recipe.source}
+                            url={recipe.recipe.url}
+                            onCardClick={() => handleCardClick(recipe.recipe)}
+                        />
+                    ))}
+                </div>
+            }
+            {selectedRecipe &&
+                <div className="specificRecipes">
+                    <CardDetails recipe={selectedRecipe}/>
+                </div>
+            }
+
         </div>
     )
 

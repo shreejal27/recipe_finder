@@ -1,5 +1,5 @@
 * {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 
@@ -22,8 +22,9 @@ body {
 }
 
 .title {
-  font-size: 6rem;
+  font-size: 5rem;
   margin-top: 4rem;
+  font-weight:bold;
   /* text-shadow: 5px 5px 5px black; */
   /* filter: drop-shadow(1rem 0 1rem black); */
 }
@@ -38,6 +39,7 @@ body {
   min-height: 70vh !important;
   /* display: flex;
   flex-direction: column; */
+  /* padding: 1rem; */
 }
 
 .row {
@@ -102,5 +104,9 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-top: 10rem;
+}
+
+.specificRecipes{
   margin-top: 10rem;
 }

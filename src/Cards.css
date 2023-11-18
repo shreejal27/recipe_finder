@@ -3,23 +3,34 @@
     flex-basis: 20rem;
     margin: 1rem;
     /* border: 1px solid black; */
-    border-radius: 0.3rem;
     width: 20rem;
     height: auto;
     min-height: 29rem;
     background-color: lightcyan;
-    padding: 0.3rem;
+    background-image: url('./images/table.jpg');
+    /* background-image: url('./images/table.jpg') , linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)); */
+    /* background-blend-mode: multiply; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* border-radius: 0.3rem; */
 }
 
 .cards:hover {
-    box-shadow: 0 0 20px rgba(33, 33, 33, .2);
+    box-shadow: 0.5rem 0.5rem 0.8rem #aaa;
     cursor: pointer;
-    color: #77cc00;
+    color: #FFEFD5;
 }
 
 .img {
     height: 20rem;
     width: 20rem;
+}
+
+.cardDetails{
+    padding: 1rem;
+    padding-top: 0rem;
 }
 
 .name {
@@ -39,9 +50,8 @@
     justify-content: space-around;
     margin-top: 0.5rem;
     padding: 10px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    color: black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 hr {
@@ -51,7 +61,7 @@ hr {
 
 .calories,
 .ingredients {
-    color: #77cc00;
+    color: #FFEFD5;
     font-weight: bold;
 }
 
@@ -60,10 +70,11 @@ hr {
 } */
 
 .source {
-    display: flex; /* to align text to left */
+    display: flex;
+    /* to align text to left */
     margin-top: 0.5rem;
     margin-left: 10px;
-    color: grey;
+    color: white;
     text-decoration: none;
 }
 
