@@ -23,12 +23,12 @@ export default function Content() {
         event.preventDefault()
         setSubmitted(true);
         setSelectedRecipe(null)
-        console.log(userInput)
+        // console.log(userInput)
     }
 
     function handleCardClick(recipe) {
         setSelectedRecipe(recipe)
-        console.log(recipe)
+        // console.log(recipe)
     }
 
     React.useEffect(() => {
@@ -53,7 +53,8 @@ export default function Content() {
                     <button className="button" type="submit"> <i class="fa fa-search"></i> </button>
                 </form>
             </div>
-            {!selectedRecipe &&
+
+            {!selectedRecipe && recipeData.length > 0 ? (
                 <div className="container">
                     {recipeData.map((recipe, index) => (
                         <Cards
@@ -68,12 +69,19 @@ export default function Content() {
                             onCardClick={() => handleCardClick(recipe.recipe)}
                         />
                     ))}
+                </div>) : (
+                <div >
+                    {!selectedRecipe && (
+                        <div className="error">
+                            <p>No Recipes found. <br/> Try another keyword</p>
+                        </div>
+                    )}
                 </div>
-            }
-            {selectedRecipe &&
+            )}
+            {selectedRecipe && (
                 <div className="specificRecipes">
-                    <CardDetails recipe={selectedRecipe}/>
-                </div>
+                    <CardDetails recipe={selectedRecipe} />
+                </div>)
             }
 
         </div>

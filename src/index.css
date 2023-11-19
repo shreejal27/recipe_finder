@@ -117,3 +117,13 @@ footer {
 .specificRecipes{
   margin-top: 10rem;
 }
+
+.error{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15rem;
+  font-size: 1.5rem;
+}
