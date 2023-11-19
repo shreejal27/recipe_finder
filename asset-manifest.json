@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/recipe_finder/static/css/main.b48486be.css",
+    "main.js": "/recipe_finder/static/js/main.f16e52bd.js",
+    "static/media/pizza.jpg": "/recipe_finder/static/media/pizza.c9108dd78eef7f13a0c7.jpg",
+    "static/media/table.jpg": "/recipe_finder/static/media/table.243d6862880f4f65fa75.jpg",
+    "index.html": "/recipe_finder/index.html",
+    "main.b48486be.css.map": "/recipe_finder/static/css/main.b48486be.css.map",
+    "main.f16e52bd.js.map": "/recipe_finder/static/js/main.f16e52bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b48486be.css",
+    "static/js/main.f16e52bd.js"
+  ]
+}
