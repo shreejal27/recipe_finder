@@ -64,6 +64,7 @@ body {
   padding: 0.3rem;
   padding-left: 1rem;
   font-size: 1rem;
+  /* background-color: white; */
 }
 
 input:focus{
@@ -85,16 +86,22 @@ button {
 
 }
 
-p {
-  margin: 0;
-}
+/* p {
+   margin: 0; 
+} */
+
 
 footer {
+  
   padding: 1rem;
   /* border: 1px solid black; */
   height: 3rem;
   background: PapayaWhip;
   margin-top: 2rem;
+}
+
+#footer{
+  margin: 0; 
 }
 
 .container {

@@ -59,10 +59,12 @@ hr {
 
 }
 
+
 .calories,
 .ingredients {
     color: #FFEFD5;
     font-weight: bold;
+    
 }
 
 /* a {

@@ -20,9 +20,9 @@ export default function CardDetails(props) {
         <p className="sTitle"> {recipe.label}</p>
         <div className="sNutrition">
           <p><i class="fa-solid fa-plate-wheat fa-xl"></i> <span id="text"> {Math.floor(recipe.calories)}</span></p>
-          <hr/>
+          <hr />
           <p><i class="fa-solid fa-fire-burner fa-xl"></i> <span id="text"> {recipe.totalTime ? recipe.totalTime + " mins" : "N/A"} </span></p>
-          <hr/>
+          <hr />
           <p><i class="fa-solid fa-utensils fa-xl"></i> <span id="text">{recipe.cuisineType}</span></p>
         </div>
         <div className="sContent">
@@ -36,6 +36,12 @@ export default function CardDetails(props) {
                 <li key={index}>{ingredient}</li>
               ))}
             </ol>
+            {/* <br/> */}
+                <p>
+                  <strong> Preparation</strong> 
+                  <br/>
+                    Instruction on <a href={recipe.url}  target="_blank" rel="noreferrer"> {recipe.source} </a> 
+                </p>
           </div>
         </div>
       </div>
