@@ -1,0 +1,109 @@
+.sContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    /* background-color: #f2f2f2; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); */
+    /* border: 1px solid black; */
+}
+
+.sCard{
+    margin-top: 1rem !important;
+    width: 100%;
+    /* border: 1px solid black; */
+    align-items: center;
+    text-align: center;
+    padding:0;
+    margin:0;
+}
+
+.sImg{
+    align-items: center;
+    width:100%;
+    /* border-radius: 25rem; */
+}
+
+.sTitle{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.sNutrition{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.sNutrition > p{
+    margin:1rem;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#text{
+    margin-left: 0.5rem;
+    text-transform:capitalize;
+}
+
+
+
+
+hr{
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.sContent{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: top;
+    margin-top: 3rem;
+    /* position: relative; */
+
+    /* border: 1px solid black; */
+    /* min-height: 30rem; */
+    /* height: auto; */
+}
+
+.sImage{
+    width:40%;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    /* border: 1px solid black; */
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    background-repeat: no-repeat;
+    /* Set a fixed height for .sImage or adjust as needed */
+     /* Example height, adjust as needed */
+}
+
+.sIngredient{
+    width:60%;
+    height: auto;
+    /* border: 1px solid black; */
+    text-align: left;
+    font-size: 1.3rem;
+    padding: 3rem;
+    background-color: #F4F4F4;
+    background-image: url('./images/table.jpg');
+    background-image: url('./images/table.jpg') , linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+ol>li{
+    list-style-type: none;
+}
