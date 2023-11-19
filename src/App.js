@@ -6,10 +6,14 @@ import Footer from "./components/Footer"
 import Content from "./components/Content"
 
 export default function Page() {
+  
+  const APIKey = process.env.REACT_APP_APIKey 
+  const APIId = process.env.REACT_APP_APIId 
+
   return (
     <div>
       <Header />
-      <Content />
+      <Content apiKey={APIKey} apiId={APIId}/>
       <Footer />
     </div>
   )

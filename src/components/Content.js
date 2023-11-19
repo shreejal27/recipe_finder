@@ -3,15 +3,16 @@ import React from "react"
 import Cards from "./Cards"
 import CardDetails from "./CardDetails"
 
-export default function Content() {
+export default function Content(props) {
 
     const [userInput, setUserInput] = React.useState("")
     const [recipeData, setRecipeData] = React.useState([])
     const [submitted, setSubmitted] = React.useState(false);
     const [selectedRecipe, setSelectedRecipe] = React.useState(null)
-
-    const APIKey = "0bbacea6a81b27ea27071eceb0d7471a"
-    const APIId = "3afbd549"
+    
+    const APIKey = props.apiKey;
+    const APIId = props.apiId;
+    
 
     const APIreq = `https://api.edamam.com/search?q=${userInput}&app_id=${APIId}&app_key=${APIKey}&from=0&to=20`
 
@@ -23,7 +24,7 @@ export default function Content() {
         event.preventDefault()
         setSubmitted(true);
         setSelectedRecipe(null)
-        // console.log(userInput)
+        // console.log(APIId)
     }
 
     function handleCardClick(recipe) {
@@ -32,6 +33,7 @@ export default function Content() {
     }
 
     React.useEffect(() => {
+   
         if (submitted) {
             fetch(APIreq)
                 .then(res => res.json())
