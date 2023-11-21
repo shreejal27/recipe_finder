@@ -29,7 +29,13 @@
 .sTitle{
     font-size: 2.4rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.sDiet{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 .sNutrition{
@@ -42,12 +48,16 @@
 .sNutrition > p{
     margin:1rem;
     font-size: 1.1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.sNutrition>p>i, .sDiet>i{
+    margin-right:0.3rem;
 }
 
 #text{
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
     text-transform:capitalize;
 }
 

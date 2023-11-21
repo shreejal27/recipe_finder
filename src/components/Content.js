@@ -44,7 +44,7 @@ export default function Content(props) {
 
     return (
         <div id="content">
-            <div class="row">
+            <div className="row">
                 <form id="form" onSubmit={handleSubmit}>
                     <input type="text"
                         id="input"
@@ -52,7 +52,7 @@ export default function Content(props) {
                         onChange={handleChange}
                         value={userInput}
                     />
-                    <button className="button" type="submit"> <i class="fa fa-search"></i> </button>
+                    <button className="button" type="submit"> <i className="fa fa-search"></i> </button>
                 </form>
             </div>
 
